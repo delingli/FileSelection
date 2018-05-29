@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="isNeedShowProtocol"
+            type="boolean"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_splash">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="80dp"
+            android:text="@string/splash_desc"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="125dp"
+            android:text="@string/freeshare"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_splash_protocol"
+            android:orientation="vertical"
+            android:visibility="@{isNeedShowProtocol ? View.VISIBLE : View.GONE}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:text="@string/splash_protocol_title"
+                android:textColor="#333333"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="#1cc29e"/>
+
+            <TextView
+                android:id="@+id/splash_protocol_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="32dp"
+                android:fadeScrollbars="false"
+                android:maxLines="12"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbars="vertical"
+                android:text="@string/splash_protocol"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="32dp"
+                android:background="#d6d6d6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_splash_left_btn"
+                    android:minHeight="50dp"
+                    android:onClick="onClickCancel"
+                    android:text="@string/splash_cancel"
+                    android:textColor="#333"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:layout_width="0.7dp"
+                    android:layout_height="match_parent"
+                    android:background="#d6d6d6"/>
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_splash_right_btn"
+                    android:minHeight="50dp"
+                    android:onClick="onClickEnsure"
+                    android:text="@string/splash_ensure"
+                    android:textColor="#1cc29e"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

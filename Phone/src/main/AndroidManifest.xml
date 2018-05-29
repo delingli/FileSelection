@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.stkj.freeshare">
+
+    <uses-sdk tools:overrideLibrary="com.ventsea.nio" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".FreeShare"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/freeshare"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/FreeShare"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:label,android:allowBackup">
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FSFullScreen">
+
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ResourceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ReceiveActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.aigestudio.needle.wifidirect.WIFIDirectServerService" />
+        <service android:name="com.aigestudio.needle.wifidirect.WIFIDirectClientService" />
+
+        <activity android:name=".activities.Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

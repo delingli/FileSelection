@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.stkj.freeshare"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+dependencies {
+    implementation project(':Framework')
+    implementation 'com.android.support:design:27.1.1'
+    implementation('com.android.support.constraint:constraint-layout:1.1.0') {
+        exclude group: 'android.arch.lifecycle', module: 'livedata'
+    }
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+    implementation "android.arch.lifecycle:livedata:1.1.1"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    implementation 'com.android.databinding:baseLibrary:3.1.2'
+    implementation 'com.aigestudio:avatar:1.0.7'
+    implementation 'com.aigestudio:needle:1.0.0'
+    implementation 'com.stkj.lib:transport-server:1.0.1'
+    implementation 'eu.davidea:flexible-adapter:5.0.4'
+    implementation 'eu.davidea:flexible-adapter-ui:1.0.0-b4'
+    implementation 'eu.davidea:flexible-adapter-livedata:1.0.0-b2'
+    implementation 'eu.davidea:flexible-adapter-databinding:1.0.0-b3'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+}

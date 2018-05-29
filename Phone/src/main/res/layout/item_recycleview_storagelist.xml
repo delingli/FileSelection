@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_leftImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/ic_res_storage" />
+
+    <LinearLayout
+        android:id="@+id/ll_centercontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/iv_leftImg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_debiceStorageDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内部存储" />
+
+        <TextView
+            android:id="@+id/tv_storageSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="0G"
+            android:textColor="@color/color_9B9B9B" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/ic_res_file_arrow" />
+
+</RelativeLayout>

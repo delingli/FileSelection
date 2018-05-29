@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY freeshare "点传">]>
+<resources>
+    <string name="freeshare">&freeshare;</string>
+
+    <string name="title_resource">选择资料</string>
+    <string name="title_receive">我要接收</string>
+    <string name="title_send">发送文件</string>
+
+    <string name="permission_grant_title">&freeshare;权限申请说明</string>
+    <string name="permission_grant_known">知道了</string>
+    <string name="permission_grant_desc">&freeshare;需要申请%1$s权限以便为您提供更好的应用体验，请在接下来的权限申请对话框中点击确定授予我们相关权限，该操作不涉及您任何的隐私信息，我们也不会向任何无关的第三方提供任何与此相关的信息，请您放心使用。</string>
+    <string name="permission_separator">、</string>
+    <string name="permission_connector"> 和 </string>
+    <string name="permission_location">查找位置信息</string>
+    <string name="permission_phone_state">读取设备信息</string>
+    <string name="permission_storage">获取存储空间</string>
+    <string name="permission_forbid_title">缺少必要权限</string>
+    <string name="permission_forbid_toast">缺少必要的%1$s权限</string>
+    <string name="permission_forbid_desc">&freeshare;缺少运行所需的%1$s权限，请前往：\n\n设置->应用->&freeshare;->权限\n\n中打开相关权限。</string>
+    <string name="permission_forbid_goto">前往</string>
+    <string name="permission_forbid_not_yet">算了</string>
+
+    <string name="splash_desc">随时随地,极速互传</string>
+    <string name="splash_protocol_title">服务条款</string>
+    <string name="splash_protocol">1.点传极客版可以帮助您将个人数据从一个设备传输到另一个设备，为提供基本服务，本软件需开启Wi-Fi以及打开Wi-Fi热点进行数据传输，在使用过程中，将联网并收集和处理以下信息。\n\n①设备信息，包括IMEl和IMSI;\n②使用数据，包括错误信息和特定功能使用频率。此数据用于创建增强功能和更新、提供服务改善和升级、提供客户支持服务及其他与运行点传极客版有关的必要或所需服务。对于从您的设备收集的所有信息，三体科技将严格保密。您可通过退出本软件来终止数据的收集和上传。\n\n2.您可以使用本软件，将某些数据(通讯录、通话记录、信息、多媒体、应用程序等)，以及您拥有或掌握的内容，从一个设备复制和传输到另一个设备。您同意仅使用本软件来复制和传输您拥有版权、复制权，或法律批准复制的材料以及无版权材料。您确认，以上部分内容将由三体科技以外的第三方提供，您的使用行为不会触犯包括知识产权法律在内的法律法规，也不会违反提供上述内容的第三方使用协议或条款。对于您使用的第三方内容，三体科技不承担相关责任和义务。\n\n3.为提供基本服务，"点传极客版需获取您的通讯录权限、电话权限、短信权限、存储权限、位置权限以及相机权限(位置与相机权限仅发送数据时需要）。\n\n点击”同意”，即表示您同意上述内容</string>
+    <string name="splash_cancel">取消</string>
+    <string name="splash_ensure">同意</string>
+
+    <string name="main_section_send">我要发送</string>
+    <string name="main_section_receive">我要接收</string>
+
+    <string name="resource_application_title">应用（%1$d）</string>
+</resources>

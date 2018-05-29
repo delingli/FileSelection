@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <import type="android.text.TextUtils"/>
+
+        <variable
+            name="model"
+            type="com.stkj.freeshare.models.dialogs.DialogNormalModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/dialog_normal_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@{model.title}"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:visibility="@{TextUtils.isEmpty(model.title) ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/dialog_normal_desc_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names"/>
+
+        <TextView
+            android:id="@+id/dialog_normal_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{model.desc}"
+            android:textColor="#333"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/cities"/>
+
+        <TextView
+            android:id="@+id/dialog_normal_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@{model.left}"
+            android:textColor="#1cc29e"
+            android:textSize="14sp"
+            android:visibility="@{TextUtils.isEmpty(model.left) ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dialog_normal_right_tv"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_normal_desc_tv"
+            tools:text="@tools:sample/first_names"/>
+
+        <TextView
+            android:id="@+id/dialog_normal_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{model.right}"
+            android:textColor="#333"
+            android:textSize="14sp"
+            android:visibility="@{TextUtils.isEmpty(model.right) ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_normal_desc_tv"
+            tools:text="@tools:sample/first_names"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>
